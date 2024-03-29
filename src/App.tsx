@@ -5,6 +5,7 @@ import "./App.css";
 import AdminLayout from "./components/layouts/admin-layout";
 import Dashboard from "./components/Dashboard";
 import Customer from "./components/customer";
+import Reports from "./components/reports";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" Component={Dashboard} />
             <Route path="/customers" Component={Customer} />
+            <Route path="/reports" Component={Reports} />
             {/* Add more routes here */}
           </Routes>
         </AdminLayout>
