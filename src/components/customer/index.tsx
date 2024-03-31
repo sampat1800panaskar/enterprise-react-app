@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CustomerCreate from "./CustomerCreate"; // Updated import statement
+import CustomerCreate from "./CustomerCreate"; 
 import CustomerSummary from "./CustomerSummary";
 import Paper from "@mui/material/Paper";
 import Container from "@mui/material/Container";

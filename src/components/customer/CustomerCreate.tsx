@@ -30,7 +30,6 @@ const CustomerCreate = () => {
   const [preferredEmailDomains, setPreferredEmailDomains] = useState("");
 
   const handleSubmit = () => {
-    // Set submitted to true when the form is submitted
     setSubmitted(true);
 
     // Placeholder for submission
@@ -50,7 +49,7 @@ const CustomerCreate = () => {
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
-      // Placeholder for file upload logic
+     
       console.log("Uploaded file:", e.target.files[0]);
     }
   };
@@ -64,7 +63,7 @@ const CustomerCreate = () => {
           textAlign: "left",
           borderBottom: "1px solid #ccc",
           paddingBottom: "10px",
-          marginBottom: "20px", // Add margin below the line
+          marginBottom: "20px", 
         }}
       >
         Customer Details
