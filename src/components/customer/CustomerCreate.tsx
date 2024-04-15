@@ -49,7 +49,6 @@ const CustomerCreate = () => {
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
-     
       console.log("Uploaded file:", e.target.files[0]);
     }
   };
@@ -63,7 +62,7 @@ const CustomerCreate = () => {
           textAlign: "left",
           borderBottom: "1px solid #ccc",
           paddingBottom: "10px",
-          marginBottom: "20px", 
+          marginBottom: "20px",
         }}
       >
         Customer Details
@@ -74,7 +73,7 @@ const CustomerCreate = () => {
             fullWidth
             label="Name"
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e: any) => setName(e.target.value)}
             required
             error={submitted && name === ""}
             helperText={submitted && name === "" ? "Name is required" : ""}
@@ -89,7 +88,11 @@ const CustomerCreate = () => {
             onChange={(e) => setContactName(e.target.value)}
             required
             error={submitted && name === ""}
-            helperText={submitted && contactName === "" ? "Please Enter your Contact Name" : ""}
+            helperText={
+              submitted && contactName === ""
+                ? "Please Enter your Contact Name"
+                : ""
+            }
           />
         </Grid>
         <Grid item xs={12} sm={3}>
@@ -134,8 +137,7 @@ const CustomerCreate = () => {
               <MenuItem value="">Select UOM</MenuItem>
               <MenuItem value="Metric">Metric</MenuItem>
               <MenuItem value="Imperial">Imperial</MenuItem>
-           
-              </Select>
+            </Select>
           </FormControl>
         </Grid>
         <Grid item xs={12} sm={2}>
